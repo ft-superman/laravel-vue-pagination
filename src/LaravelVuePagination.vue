@@ -26,8 +26,7 @@
                 </a>
             </li>
 
-            <li class="page-item pagination-page-nav" v-for="(page, key) in computed.pageRange" :key="key" :class="{ 'active': page == computed.currentPage }"
-                :class="page === '...' ? 'page-ellipsis' : ''"
+            <li class="page-item pagination-page-nav" v-for="(page, key) in computed.pageRange" :key="key" :class="{ 'active': page == computed.currentPage, 'page-ellipsis' : page === '...' }"
             >
                 <a class="page-link" href="#" v-on="pageButtonEvents(page)">
                     {{ page }}
